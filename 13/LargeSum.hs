@@ -5,4 +5,4 @@ import System.IO
 main = do
 	input <- getContents	
 	let nums = map (read . take 11) (lines input) :: [Integer]
-	putStrLn $ show (sum nums)
+	putStrLn $ take 10 $ show (sum nums)
