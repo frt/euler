@@ -30,7 +30,7 @@ numberOfDivisors n = foldl sumDivides 0 [1..(iSqrt n)]
 			| x `divides` n	= accum + 2
 			| otherwise	= accum
 
--- The number of divisors of n will be at most (iSqrt n)/2, so we can start
+-- The number of divisors of n will be at most (iSqrt n)*2, so we can start
 -- from the first triangular number greater than (n*n)/2 to find a triangular
 -- number with more than n divisors.  See that the nth triangular number is 
 -- (n * (n+1))/2 and ((n-1) * n)/2 < (n*n)/2 for positive n.  So
