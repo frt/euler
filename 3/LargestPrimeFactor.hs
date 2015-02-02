@@ -3,7 +3,7 @@
 import System.IO (putStrLn)
 import System.Environment (getArgs)
 
--- The greatest integer i that i*i <= n.
+-- The greatest integer i that i*i <= n. [http://en.wikipedia.org/wiki/Integer_square_root]
 iSqrt :: Integer -> Integer
 iSqrt n = iSqrt' n n
 	where
