@@ -1,1 +1,6 @@
 My solutions to the problems in projecteuler.net.
+
+Common funcions used in more than one solution are in the "lib" directory. Use
+the -i option for the compiler to find the imports. For example:
+	
+	$ cd 3; ghc --make LargestPrimeFactor -i../lib
