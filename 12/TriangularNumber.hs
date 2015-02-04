@@ -2,11 +2,11 @@
 
 import Data.List
 import System.IO
-import Euler (iSqrt)
+import Euler (iSqrt, sumFrom1toN)
 
 -- The sum of [0, 1, 2, 3, ..., n] is the nth triangular number.
 triangularNumber :: Integer -> Integer
-triangularNumber n = (n * (n + 1)) `div` 2
+triangularNumber = sumFrom1toN
 
 divides :: Integer -> Integer -> Bool
 divides d n = n `mod` d == 0

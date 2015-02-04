@@ -11,3 +11,7 @@ iSqrt n = iSqrt' n n
 			| otherwise	= iSqrt' n x1
 			where 
 				x1 = (x0 + (n `div` x0)) `div` 2
+
+-- The sum of [0, 1, 2, 3, ..., n].
+sumFrom1toN :: Integer -> Integer
+sumFrom1toN n = n * (n + 1) `div` 2
