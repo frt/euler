@@ -4,6 +4,7 @@ import Data.List
 import Euler (iSqrt)
 import System.Environment (getArgs)
 import System.IO (putStrLn)
+import Data.List (foldl')
 
 -- Generate the list of primes up to n using the Sieve of Eratosthenes
 primesUpto :: Integer -> [Integer]
@@ -26,7 +27,7 @@ primeFactorExponent n p
 	| otherwise = floor (log (fromIntegral n) / log (fromIntegral p))
 
 smallestMultiple :: Integer -> Integer
-smallestMultiple n = product $ map (\p -> p ^ primeFactorExponent n p) (primesUpto n)
+smallestMultiple n = foldl' (\accum p -> accum * p ^ primeFactorExponent n p) 1 (primesUpto n)
 
 main = do
 	[arg] <- getArgs
