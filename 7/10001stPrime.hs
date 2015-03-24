@@ -1,4 +1,4 @@
--- http://projecteuler.net/problem=6
+-- http://projecteuler.net/problem=7
 
 import Euler (iSqrt)
 import System.IO (putStrLn)
