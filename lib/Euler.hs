@@ -27,7 +27,9 @@ minus  xs     _     = xs
 
 -- Generate the list of primes up to n using the Sieve of Eratosthenes
 primesUpto :: Integer -> [Integer]
-primesUpto m = 2 : sieve [3, 5 .. m]
-	where
-		sieve (x:xs) = x : sieve (xs `minus` [x*x, x*x + 2*x .. m])
-		sieve [] = []
+primesUpto m 
+	| m < 2 = []
+	| otherwise = 2 : sieve [3, 5 .. m]
+		where
+			sieve (x:xs) = x : sieve (xs `minus` [x*x, x*x + 2*x .. m])
+			sieve [] = []
