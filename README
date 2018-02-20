@@ -4,3 +4,5 @@ Common funcions used in more than one solution are in the "lib" directory. Use
 the -i option for the compiler to find the imports. For example:
 	
 	$ cd 3; ghc --make LargestPrimeFactor -i../lib
+
+If you want to buy me a coffee follow this link: https://ko-fi.com/M4M09AL6
